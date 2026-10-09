@@ -25,7 +25,7 @@ if "criteria" not in st.session_state:
 if "alternatives" not in st.session_state:
     st.session_state.alternatives = ["XAUUSD", "EURUSD", "GBPJPY", "BTCUSD"]
 if "values" not in st.session_state:
-    st.session_state.values = {
+    st.session_state["values"] = {
         "XAUUSD": {"Spread": 3.5, "Likuiditas": 8,  "Volatilitas": 9,  "Win-rate Backtest": 55, "Max Drawdown": 20},
         "EURUSD": {"Spread": 1.0, "Likuiditas": 10, "Volatilitas": 4,  "Win-rate Backtest": 60, "Max Drawdown": 12},
         "GBPJPY": {"Spread": 2.5, "Likuiditas": 6,  "Volatilitas": 8,  "Win-rate Backtest": 52, "Max Drawdown": 25},
@@ -34,7 +34,7 @@ if "values" not in st.session_state:
 
 criteria     = st.session_state.criteria
 alternatives = st.session_state.alternatives
-values       = st.session_state.values
+values       = st.session_state["values"]
 
 
 # ---------------------------------------------------------------------
